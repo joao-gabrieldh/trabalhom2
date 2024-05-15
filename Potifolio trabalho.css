@@ -1,0 +1,117 @@
+body {
+    margin: 0; /* Remove a margem padrão do corpo */
+}
+
+header {
+    height: 100vh; /* Define a altura para ocupar a tela inteira */
+    position: relative;
+    color: azure;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden; /* Impede que o conteúdo ultrapasse a altura do header */
+}
+
+header::before {
+    content: "";
+    background-image: url(https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABRzNe7ChTyjqyh7zTw1jtmK23WUKk3I9JeagIjEsBxYa_8oyipAk0dxjcwW0Nnq2KDDDmon1_ExtLJ4Jmxy6Az69H-EOVlRH-xvm.jpg?r=014);
+    background-size: cover;
+    background-position: center;
+    position: fixed; /* Torna a imagem de fundo fixa */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 1; /* Removemos a opacidade para remover o filtro branco */
+}
+
+h1 {
+    margin-top: 20%; /* Ajustamos a margem superior do texto */
+    margin-left: 10%; /* Ajustamos a margem esquerda do texto */
+    font-family: 'Montserrat', sans-serif;
+}
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(235, 235, 235);
+    padding-bottom: 10px;
+}
+
+p {
+    color: white; /* Cor branca para o texto */
+}
+.fila {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.fila img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilo para a imagem e legenda */
+    .container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .imagem-expandida {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(10, 10, 10, 0.7);
+        z-index: 9999;
+        text-align: center;
+    }
+
+    .container input[type="checkbox"] {
+        display: none;
+    }
+
+    .container input[type="checkbox"]:checked + .imagem-expandida {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imagem-expandida img {
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    .legenda {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30%; /* Largura da legenda */
+        height: 100%;
+        background-color: rgba(5, 5, 5, 0.9);
+        padding: 20px;
+        overflow-y: auto; /* Adiciona barra de rolagem vertical se necessário */
+    }
+
+    /* Estilo para o botão de fechar */
+    .fechar {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+    }
